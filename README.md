@@ -16,8 +16,8 @@ Ele deve ser usado apenas para ambiente de testes e laboratórios.
 <p>Vá para a pasta /opt e baixe o script em seu Ubuntu Server 22.04, e o execute .</p>
 <p>Passos:</p>
 <p>cd /opt</p>
-<p>git  clone https://github.com/JoelFernandes01/Zabbix-via-Scripts.git</p>
-<p>cd Install-Prometheus-Script/</p>
+<p>git clone https://github.com/JoelFernandes01/Prometheus-via-Script.git</p>
+<p>cd Prometheus-via-Script</p>
 <p>./Install-Prometheus-Script.sh</p>
 
 <h4>Observação:</h4>
