@@ -26,4 +26,3 @@ Ele deve ser usado apenas para ambiente de testes e laboratórios.
 Se achar que possa nos ajudar em melhorá-lo, entre em contato e vamos melhorar .
 
 Agradeço a quem puder colaborar .
-
