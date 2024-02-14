@@ -25,13 +25,13 @@ sed -i 's/'$inet_value'   ubuntu/'$inet_value'   prometheus-server/' /etc/hosts
 # Extrair o valor inet da primeira placa de rede excluindo a interface "lo" e armazenar em uma variável
 inet_value=$(ifconfig | awk '/inet / && $1 !~ /lo/{gsub("addr:",""); print $2; exit}')
 
-# Criando e configurando o usuário do Prometheus
+echo "Criando e configurando o usuário do Prometheus"
 sudo useradd --no-create-home --shell /bin/false prometheus
 sudo mkdir /etc/prometheus
 sudo mkdir /var/lib/prometheus
 chown prometheus:prometheus /var/lib/prometheus
 
-# Baixanhando, verificando e instalando o pacote Prometheus
+echo "Baixanhando, verificando e instalando o pacote Prometheus"
 cd /opt/
 wget https://github.com/prometheus/prometheus/releases/download/v2.49.1/prometheus-2.49.1.linux-amd64.tar.gz
 sudo sha256sum /opt/prometheus-2.49.1.linux-amd64.tar.gz
@@ -64,6 +64,8 @@ ExecStart=/usr/local/bin/prometheus \
 [Install]
 WantedBy=multi-user.target
 EOF
+sed -i 's/localhost/prometheus-server/' /etc/prometheus/prometheus.yml
+sudo ufw allow 9090/tcp
 sudo systemctl daemon-reload
 sudo systemctl start prometheus
 sudo systemctl enable prometheus
