@@ -125,3 +125,5 @@ sed -i 's/localhost/prometheus-server/g' /etc/prometheus/prometheus.yml
 sudo systemctl restart node_exporter
 sudo systemctl restart prometheus
 
+# Reboot necessário para instalar o Grafana
+shutdown -r now
