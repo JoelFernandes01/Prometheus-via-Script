@@ -122,6 +122,6 @@ echo "  - job_name: 'prometheus-node'
 
 # Mudando o nome localhost em /etc/prometheus/prometheus.yml
 sed -i 's/localhost/prometheus-server/g' /etc/prometheus/prometheus.yml
-
 sudo systemctl restart node_exporter
 sudo systemctl restart prometheus
+
