@@ -21,7 +21,7 @@ Ele deve ser usado apenas para ambiente de testes e laboratórios.
 <p>./Install-Prometheus-Script.sh</p>
 
 <h4>Observação:</h4>
-<p>Antes de executar o script do Grafana, é necessário um reboot no servidor</p>
+<p>Antes de executar o script do Grafana, é necessário um <b>reboot no servidor</b></p>
 
 
 Se achar que possa nos ajudar em melhorá-lo, entre em contato e vamos melhorar .
