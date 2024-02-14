@@ -31,7 +31,7 @@ sudo mkdir /etc/prometheus
 sudo mkdir /var/lib/prometheus
 chown prometheus:prometheus /var/lib/prometheus
 
-echo "Baixanhando, verificando e instalando o pacote Prometheus"
+echo "Baixando, verificando e instalando o pacote Prometheus"
 cd /opt/
 wget https://github.com/prometheus/prometheus/releases/download/v2.49.1/prometheus-2.49.1.linux-amd64.tar.gz
 sudo sha256sum /opt/prometheus-2.49.1.linux-amd64.tar.gz
@@ -77,7 +77,7 @@ echo    "######## URL de acesso : http://'$inet_value':9090    ########"
 echo    "########============================================########"
 sleep 10
 
-echo "# Instalando e configurando o Node_Exporter"
+echo "Baixando, instalando e configurando o Node_Exporter"
 echo "Preparando o ambiente"
 wget https://github.com/prometheus/node_exporter/releases/download/v1.7.0/node_exporter-1.7.0.linux-amd64.tar.gz
 sudo tar -xvf node_exporter-1.7.0.linux-amd64.tar.gz
